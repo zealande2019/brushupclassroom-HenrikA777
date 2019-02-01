@@ -20,5 +20,17 @@ namespace ClassRoom
         public List<Studerende> StuderendeListe { get; set; }
 
         public DateTime SemesterStart { get; set; }
+
+        public override string ToString()
+        {
+            string output = "Klasse navn:" + KlasseNavn + "\n" + "Semester start:" + SemesterStart.ToString() + "\n" + "Studerende: \n";
+            foreach (var studerende in StuderendeListe)
+            {
+                output +=
+                    $"Navn: {studerende.Navn}       Fødselsdato: {studerende.Fødselsdag}/{studerende.Fødselsmåned} \n";
+            }
+
+            return output;
+        }
     }
 }
