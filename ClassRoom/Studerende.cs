@@ -31,8 +31,7 @@ namespace ClassRoom
         {
             get
             {
-                int caseSwitch = Fødselsmåned;
-                switch (caseSwitch)
+                switch (Fødselsmåned)
                 {
                     case 1:
                     case 2:
