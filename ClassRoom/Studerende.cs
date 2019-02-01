@@ -14,6 +14,10 @@ namespace ClassRoom
         {
             Navn = navn;
             Fødselsdag = fødselsdag;
+            if (0 >= fødselsmåned || fødselsmåned >= 13)
+            {
+                throw new ArgumentException();
+            }
             Fødselsmåned = fødselsmåned;
         }
 

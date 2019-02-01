@@ -16,6 +16,7 @@ namespace ClassRoom
             {
                 Console.WriteLine(studerende.Navn + "   ||  " + studerende.Årstid);
             }
+            klasse3r.PrintÅrstider();
 
             Console.ReadLine();
         }
