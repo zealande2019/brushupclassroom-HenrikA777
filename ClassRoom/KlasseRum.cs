@@ -58,7 +58,7 @@ namespace ClassRoom
 
         public override string ToString()
         {
-            string output = "Klasse navn:" + KlasseNavn + "\n" + "Semester start:" + SemesterStart.ToString() + "\n" + "Studerende: \n";
+            string output = "Klasse navn: " + KlasseNavn + "\n" + "Semester start: " + SemesterStart.ToString() + "\n" + "Studerende: \n";
             foreach (var studerende in StuderendeListe)
             {
                 output +=
