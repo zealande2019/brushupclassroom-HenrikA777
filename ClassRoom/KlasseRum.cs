@@ -45,8 +45,6 @@ namespace ClassRoom
                     case "Vinter":
                         årstider["Vinter"]++;
                         break;
-                    default:
-                        break;
                 }
             }
 
