@@ -23,34 +23,36 @@ namespace ClassRoom
 
         public void PrintÅrstider()
         {
-            Dictionary<string, int> årstider = new Dictionary<string, int>();
-            årstider.Add("Forår", 0);
-            årstider.Add("Efterår", 0);
-            årstider.Add("Sommer", 0);
-            årstider.Add("Vinter", 0);
-            foreach (var studerende in StuderendeListe)
-            {
-                string caseSwitch = studerende.Årstid;
-                switch (caseSwitch)
-                {
-                    case "Forår":
-                        årstider["Forår"]++;
-                        break;
-                    case "Sommer":
-                        årstider["Sommer"]++;
-                        break;
-                    case "Efterår":
-                        årstider["Efterår"]++;
-                        break;
-                    case "Vinter":
-                        årstider["Vinter"]++;
-                        break;
-                }
-            }
+            //Dictionary<string, int> årstider = new Dictionary<string, int>();
+            //årstider.Add("Forår", 0);
+            //årstider.Add("Efterår", 0);
+            //årstider.Add("Sommer", 0);
+            //årstider.Add("Vinter", 0);
+            //foreach (var studerende in StuderendeListe)
+            //{
+            //    string caseSwitch = studerende.Årstid;
+            //    switch (caseSwitch)
+            //    {
+            //        case "Forår":
+            //            årstider["Forår"]++;
+            //            break;
+            //        case "Sommer":
+            //            årstider["Sommer"]++;
+            //            break;
+            //        case "Efterår":
+            //            årstider["Efterår"]++;
+            //            break;
+            //        case "Vinter":
+            //            årstider["Vinter"]++;
+            //            break;
+            //    }
+            //}
 
-            foreach (var årstid in årstider)
+            var seasons = StuderendeListe.GroupBy(p => p.Årstid);
+
+            foreach (var årstid in seasons)
             {
-                Console.WriteLine($"{årstid.Key}: {årstid.Value}");
+                Console.WriteLine($"{årstid.Key}: {årstid.Count()}");
             }
         }
 
